@@ -16,7 +16,6 @@ span {
 .page {
   display: flex;
   height: 100vh;
-  /* calculate the height. Header is 30px */
 }
 
 .sideBar {

@@ -38,18 +38,21 @@ function HomeTabs() {
   ];
   return (
     <div className="">
-      <h1 className="flex justify-center text-[#F89E1B] text-[25px] font-[700] pb-20">
+      <h1 className="flex justify-center text-[#F89E1B] text-[25px] font-[700] pb-[3rem]">
         EPOCH STAKING
       </h1>
       <TheTabs />
-
-      {/* {TabData.map((value) => (
-        <div className="flex flex-col">
-          <TheTabs name={value.name} price={value.price} />
-        </div>
-      ))} */}
+      {/* <div className="flex flex-wrap w-[30%]">
+        {TabData.map((value, index) => (
+          <div className="py-3 px-20 theCard flex items-center flex-col">
+            <p className="text-[15px]"> {value.name}</p>
+            <p className="text-[25px]">{value.price}</p>
+          </div>
+        ))}
+      </div> */}
     </div>
   );
+  //   ------------- I STRUGGLED A LITTLE WITH THE CSS OTHERWISE I'D HAVE USED MAP TO DO THE CARDS AS WELL ------------------
 }
 
 function TheTabs({ name, price }) {

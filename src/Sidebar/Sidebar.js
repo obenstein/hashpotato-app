@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../Assets/Images/Group.png";
-import Telegram from "../Assets/Images/telegram.png";
-import Twitter from "../Assets/Images/twitter.png";
-import Discord from "../Assets/Images/discord.png";
 import { SocialIcon } from "react-social-icons";
 import "./Sidebar.css";
 
@@ -169,11 +166,11 @@ function Sidebar() {
 
   return (
     <div>
-      <div className="flex justify-center items-center gap-5 py-10">
+      <div className="flex justify-center items-center text-left gap-6 py-10">
         <img alt="" src={Logo} style={{ width: "2.5vmax" }} />
-        <span className="theTitle text-[32px]">VAULT PASS</span>
+        <span className="theTitle text-[2vmax]">VAULT PASS</span>
       </div>
-      <div className="h-[75vh]">
+      <div className="h-[70vh]">
         {NavTabs.map((value) => (
           <div>
             <button className="flex px-10 py-2 gap-2 cursor-pointer">
@@ -181,6 +178,7 @@ function Sidebar() {
               {value.name === "Bond" ? (
                 <div className="text-left">
                   <span
+                    className="text-[1vmax]"
                     onClick={() => {
                       setcheck(!check);
                     }}
@@ -188,7 +186,7 @@ function Sidebar() {
                     {value.name}
                   </span>
                   <p
-                    className={`flex justify-between gap-10 text-[#6A6971] py-3 font-semibold ${
+                    className={`flex justify-between gap-10 text-[#6A6971] text-[1vmax] py-3 font-semibold ${
                       check ? "block" : "hidden"
                     }`}
                   >
@@ -201,13 +199,13 @@ function Sidebar() {
                         check ? "block" : "hidden"
                       }`}
                     >
-                      <span>{value2.name}</span>
-                      <span>{value2.value}</span>
+                      <span className="text-[1vmax]">{value2.name}</span>
+                      <span className="text-[1vmax]">{value2.value}</span>
                     </div>
                   ))}
                 </div>
               ) : (
-                <span className="font-semibold">{value.name}</span>
+                <span className="font-semibold text-[1vmax]">{value.name}</span>
               )}
             </button>
           </div>
