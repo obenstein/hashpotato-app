@@ -1,0 +1,6 @@
+.SideBarContainer {
+  background: rgba(22, 22, 35, 0.6);
+  backdrop-filter: blur(12.5px);
+  height: 100vh;
+  width: 400px;
+}
